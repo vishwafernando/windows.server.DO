@@ -6,6 +6,7 @@ Jalankan perintah berikut untuk mengunduh installer:
 
 ```bash
 wget https://raw.githubusercontent.com/emuhib/windows.server.DO/main/windows-server-autoinstaller.sh
+
 ```
 
 ### 2. Berikan Izin Eksekusi pada File
@@ -13,6 +14,7 @@ Setelah diunduh, berikan izin agar file dapat dijalankan:
 
 ```bash
 chmod +x windows-server-autoinstaller.sh
+
 ```
 
 ### 3. Jalankan Installer
@@ -20,6 +22,7 @@ Jalankan installer dengan perintah berikut:
 
 ```bash
 ./windows-server-autoinstaller.sh
+
 ```
 
 ### 4. Jalankan QEMU
@@ -37,6 +40,8 @@ qemu-system-x86_64 \
 -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
 -device usb-tablet \
 -vnc :0
+
+
 ```
 
 **Catatan: Tekan Enter dua kali untuk melanjutkan.**
@@ -53,13 +58,15 @@ Setelah konfigurasi selesai, kompres image Windows Server. Ganti `xxxx` dengan v
 
 ```bash
 dd if=windowsxxxx.img | gzip -c > windowsxxxx.gz
+
 ```
 
 ### 7. Instal Apache
 Instal Apache untuk melayani file melalui web:
 
 ```bash
-apt install apache2
+apt install apache2 -y
+
 ```
 
 ### 8. Berikan Akses Firewall untuk Apache
@@ -67,6 +74,7 @@ Izinkan akses Apache melalui firewall:
 
 ```bash
 sudo ufw allow 'Apache'
+
 ```
 
 ### 9. Pindahkan File Windows Server ke Lokasi Web
@@ -74,6 +82,7 @@ Salin file Windows Server yang sudah dikompres ke direktori web Apache:
 
 ```bash
 cp windowsxxxx.gz /var/www/html/
+
 ```
 
 ### 10. Link Download
@@ -81,11 +90,13 @@ Setelah file dipindahkan, akses file tersebut melalui alamat IP droplet Anda:
 
 ```
 http://[IP_Droplet]/windowsxxxx.gz
+
 ```
 
 **Contoh:**
 ```
 http://188.166.190.241/windows10.gz
+
 ```
 
 ## Menjalankan Windows Server di Droplet Baru
@@ -94,6 +105,7 @@ Untuk menjalankan Windows Server di droplet baru, gunakan perintah berikut. Gant
 
 ```bash
 wget -O- --no-check-certificate LINK | gunzip | dd of=/dev/vda
+
 ```
 
 ### Catatan Penting:
