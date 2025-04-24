@@ -107,7 +107,19 @@ Untuk menjalankan Windows Server di droplet baru, gunakan perintah berikut. Gant
 wget -O- --no-check-certificate LINK | gunzip | dd of=/dev/vda
 
 ```
+## Upload File Windows Dari server Langsung ke Gdrive
+Perintah ini menggunakan rclone, jadi pastikan dulu install rclone dan atur config di server lalu sambungkan ke Gdrive
 
+**Cek Isi Folder**
+```bash
+ls -l /var/www/html/winser/
+
+```
+**Perintah Upload**
+```
+rclone copy /var/www/html/winser/windows2019.gz gdrive: --progress
+
+```
 ### Catatan Penting:
 - Pastikan Anda mengganti placeholder `xxxx` dengan versi Windows yang benar.
 - Jangan lupa untuk mengganti `LINK` dengan URL file Anda yang sebenarnya.
