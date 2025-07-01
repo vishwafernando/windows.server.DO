@@ -49,19 +49,19 @@ case $choice in
     4)
         # Windows 10
         img_file="windows10.img"
-        iso_link="http://134.122.76.13/WIN10.ISO"
+        iso_link="http://206.189.48.156/WIN10.ISO"
         iso_file="windows10.iso"
         ;;
     5)
         # Windows 11
         img_file="windows11.img"
-        iso_link="http://134.122.76.13/WIN11.ISO"
+        iso_link="http://206.189.48.156/WIN11.ISO"
         iso_file="windows11.iso"
         ;;
     6)
         # Windows 1021h2
         img_file="windows1021h2.img"
-        iso_link="http://134.122.76.13/win1021H2.img"
+        iso_link="http://206.189.48.156/win1021H2.img"
         iso_file="windows1021h2.iso"
         ;;
     *)
