@@ -2,9 +2,9 @@
 
 # --- Configuration Variables ---
 # Adjust these based on your Droplet's resources and preferences
-VM_RAM="4G" # Minimum 4G, consider 8G or more for Windows Server
-VM_CPUS="2" # Number of virtual CPUs
-VM_DISK_SIZE="60G" # Recommended 60G-80G for Windows Server, adjust as needed
+VM_RAM="8G" # Minimum 4G, consider 8G or more for Windows Server
+VM_CPUS="4" # Number of virtual CPUs
+VM_DISK_SIZE="80G" # Recommended 60G-80G for Windows Server, adjust as needed
 VNC_DISPLAY_PORT=":0" # :0 means port 5900, :1 means 5901, etc.
 BRIDGE_NAME="br0" # Name of the network bridge on your Linux host
 
