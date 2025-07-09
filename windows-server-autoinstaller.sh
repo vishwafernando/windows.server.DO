@@ -6,7 +6,7 @@ display_menu() {
     echo "1. Windows Server 2016"
     echo "2. Windows Server 2019"
     echo "3. Windows Server 2022"
-    echo "4. Windows 10"
+    echo "4. Windows Server 2025"
     echo "5. Windows 11"
     echo "6. Windows 1021h2"
     read -p "Enter your choice: " choice
@@ -47,10 +47,10 @@ case $choice in
         iso_file="windows2022.iso"
         ;;
     4)
-        # Windows 10
-        img_file="windows10.img"
-        iso_link="http://206.189.48.156/WIN10.ISO"
-        iso_file="windows10.iso"
+        # Windows Server 2025
+        img_file="windows2025.img"
+        iso_link="https://go.microsoft.com/fwlink/?linkid=2293312&clcid=0x409&culture=en-us&country=us"
+        iso_file="windows2025.iso"
         ;;
     5)
         # Windows 11
